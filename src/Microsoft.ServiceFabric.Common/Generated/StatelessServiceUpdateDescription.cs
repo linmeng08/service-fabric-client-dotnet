@@ -61,6 +61,7 @@ namespace Microsoft.ServiceFabric.Common
         /// <param name="serviceDnsName">The DNS name of the service.</param>
         /// <param name="tagsForPlacement">Tags for placement of this service.</param>
         /// <param name="tagsForRunning">Tags for running of this service.</param>
+        /// <param name="repartitionDescription">The repartition description as an object.</param>
         /// <param name="instanceCount">The instance count.</param>
         /// <param name="minInstanceCount">MinInstanceCount is the minimum number of instances that must be up to meet the
         /// EnsureAvailability safety check during operations like upgrade or deactivate node.
@@ -108,6 +109,7 @@ namespace Microsoft.ServiceFabric.Common
             string serviceDnsName = default(string),
             NodeTagsDescription tagsForPlacement = default(NodeTagsDescription),
             NodeTagsDescription tagsForRunning = default(NodeTagsDescription),
+            RepartitionSchemeDescription repartitionDescription = default(RepartitionSchemeDescription),
             int? instanceCount = default(int?),
             int? minInstanceCount = default(int?),
             int? minInstancePercentage = default(int?),
@@ -125,7 +127,8 @@ namespace Microsoft.ServiceFabric.Common
                 scalingPolicies,
                 serviceDnsName,
                 tagsForPlacement,
-                tagsForRunning)
+                tagsForRunning,
+                repartitionDescription)
         {
             instanceCount?.ThrowIfLessThan("instanceCount", -1);
             this.InstanceCount = instanceCount;

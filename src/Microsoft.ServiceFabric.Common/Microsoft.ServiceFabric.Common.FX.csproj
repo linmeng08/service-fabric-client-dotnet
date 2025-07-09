@@ -373,6 +373,7 @@
     <Compile Include="Generated\MoveCost.cs" />
     <Compile Include="Generated\NamedPartitionInformation.cs" />
     <Compile Include="Generated\NamedPartitionSchemeDescription.cs" />
+    <Compile Include="Generated\NamedRepartitionSchemeDescription.cs" />
     <Compile Include="Generated\NetworkKind.cs" />
     <Compile Include="Generated\NetworkRef.cs" />
     <Compile Include="Generated\NetworkResourceDescription.cs" />
@@ -498,6 +499,8 @@
     <Compile Include="Generated\RepairTaskHistory.cs" />
     <Compile Include="Generated\RepairTaskUpdateHealthPolicyDescription.cs" />
     <Compile Include="Generated\RepairTaskUpdateInfo.cs" />
+    <Compile Include="Generated\RepartitionScheme.cs" />
+    <Compile Include="Generated\RepartitionSchemeDescription.cs" />
     <Compile Include="Generated\ReplicaEvent.cs" />
     <Compile Include="Generated\ReplicaHealth.cs" />
     <Compile Include="Generated\ReplicaHealthEvaluation.cs" />
@@ -561,6 +564,7 @@
     <Compile Include="Generated\SecretValueResourceProperties.cs" />
     <Compile Include="Generated\SeedNodeSafetyCheck.cs" />
     <Compile Include="Generated\SelectedPartition.cs" />
+    <Compile Include="Generated\ServiceSensitivityDescription.cs" />
     <Compile Include="Generated\ServiceArmMetadataUpdateDescription.cs" />
     <Compile Include="Generated\ServiceBackupConfigurationInfo.cs" />
     <Compile Include="Generated\ServiceBackupEntity.cs" />

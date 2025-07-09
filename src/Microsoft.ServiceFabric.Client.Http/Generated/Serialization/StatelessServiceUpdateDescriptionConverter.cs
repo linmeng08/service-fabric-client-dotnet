@@ -43,6 +43,7 @@ namespace Microsoft.ServiceFabric.Client.Http.Serialization
             var serviceDnsName = default(string);
             var tagsForPlacement = default(NodeTagsDescription);
             var tagsForRunning = default(NodeTagsDescription);
+            var repartitionDescription = default(RepartitionSchemeDescription);
             var instanceCount = default(int?);
             var minInstanceCount = default(int?);
             var minInstancePercentage = default(int?);
@@ -93,6 +94,10 @@ namespace Microsoft.ServiceFabric.Client.Http.Serialization
                 {
                     tagsForRunning = NodeTagsDescriptionConverter.Deserialize(reader);
                 }
+                else if (string.Compare("RepartitionDescription", propName, StringComparison.OrdinalIgnoreCase) == 0)
+                {
+                    repartitionDescription = RepartitionSchemeDescriptionConverter.Deserialize(reader);
+                }
                 else if (string.Compare("InstanceCount", propName, StringComparison.OrdinalIgnoreCase) == 0)
                 {
                     instanceCount = reader.ReadValueAsInt();
@@ -135,6 +140,7 @@ namespace Microsoft.ServiceFabric.Client.Http.Serialization
                 serviceDnsName: serviceDnsName,
                 tagsForPlacement: tagsForPlacement,
                 tagsForRunning: tagsForRunning,
+                repartitionDescription: repartitionDescription,
                 instanceCount: instanceCount,
                 minInstanceCount: minInstanceCount,
                 minInstancePercentage: minInstancePercentage,
@@ -197,6 +203,11 @@ namespace Microsoft.ServiceFabric.Client.Http.Serialization
             if (obj.TagsForRunning != null)
             {
                 writer.WriteProperty(obj.TagsForRunning, "TagsForRunning", NodeTagsDescriptionConverter.Serialize);
+            }
+
+            if (obj.RepartitionDescription != null)
+            {
+                writer.WriteProperty(obj.RepartitionDescription, "RepartitionDescription", RepartitionSchemeDescriptionConverter.Serialize);
             }
 
             if (obj.InstanceCount != null)
