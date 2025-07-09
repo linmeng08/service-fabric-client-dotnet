@@ -62,6 +62,7 @@ namespace Microsoft.ServiceFabric.Common
         /// <param name="serviceDnsName">The DNS name of the service.</param>
         /// <param name="tagsForPlacement">Tags for placement of this service.</param>
         /// <param name="tagsForRunning">Tags for running of this service.</param>
+        /// <param name="repartitionDescription">The repartition description as an object.</param>
         protected ServiceUpdateDescription(
             ServiceKind? serviceKind,
             string flags = default(string),
@@ -73,7 +74,8 @@ namespace Microsoft.ServiceFabric.Common
             IEnumerable<ScalingPolicyDescription> scalingPolicies = default(IEnumerable<ScalingPolicyDescription>),
             string serviceDnsName = default(string),
             NodeTagsDescription tagsForPlacement = default(NodeTagsDescription),
-            NodeTagsDescription tagsForRunning = default(NodeTagsDescription))
+            NodeTagsDescription tagsForRunning = default(NodeTagsDescription),
+            RepartitionSchemeDescription repartitionDescription = default(RepartitionSchemeDescription))
         {
             serviceKind.ThrowIfNull(nameof(serviceKind));
             this.ServiceKind = serviceKind;
@@ -87,6 +89,7 @@ namespace Microsoft.ServiceFabric.Common
             this.ServiceDnsName = serviceDnsName;
             this.TagsForPlacement = tagsForPlacement;
             this.TagsForRunning = tagsForRunning;
+            this.RepartitionDescription = repartitionDescription;
         }
 
         /// <summary>
@@ -169,6 +172,11 @@ namespace Microsoft.ServiceFabric.Common
         /// Gets tags for running of this service.
         /// </summary>
         public NodeTagsDescription TagsForRunning { get; }
+
+        /// <summary>
+        /// Gets the repartition description as an object.
+        /// </summary>
+        public RepartitionSchemeDescription RepartitionDescription { get; }
 
         /// <summary>
         /// Gets the kind of service (Stateless or Stateful).

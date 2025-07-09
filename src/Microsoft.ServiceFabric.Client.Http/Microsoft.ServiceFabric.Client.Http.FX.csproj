@@ -418,6 +418,7 @@
     <Compile Include="Generated\Serialization\MoveCostConverter.cs" />
     <Compile Include="Generated\Serialization\NamedPartitionInformationConverter.cs" />
     <Compile Include="Generated\Serialization\NamedPartitionSchemeDescriptionConverter.cs" />
+    <Compile Include="Generated\Serialization\NamedRepartitionSchemeDescriptionConverter.cs" />
     <Compile Include="Generated\Serialization\NetworkKindConverter.cs" />
     <Compile Include="Generated\Serialization\NetworkRefConverter.cs" />
     <Compile Include="Generated\Serialization\NetworkResourceDescriptionConverter.cs" />
@@ -543,6 +544,8 @@
     <Compile Include="Generated\Serialization\RepairTaskHistoryConverter.cs" />
     <Compile Include="Generated\Serialization\RepairTaskUpdateHealthPolicyDescriptionConverter.cs" />
     <Compile Include="Generated\Serialization\RepairTaskUpdateInfoConverter.cs" />
+    <Compile Include="Generated\Serialization\RepartitionSchemeConverter.cs" />
+    <Compile Include="Generated\Serialization\RepartitionSchemeDescriptionConverter.cs" />
     <Compile Include="Generated\Serialization\ReplicaEventConverter.cs" />
     <Compile Include="Generated\Serialization\ReplicaHealthConverter.cs" />
     <Compile Include="Generated\Serialization\ReplicaHealthEvaluationConverter.cs" />
@@ -652,6 +655,7 @@
     <Compile Include="Generated\Serialization\ServiceResourceDescriptionConverter.cs" />
     <Compile Include="Generated\Serialization\ServiceResourcePropertiesConverter.cs" />
     <Compile Include="Generated\Serialization\ServicesHealthEvaluationConverter.cs" />
+    <Compile Include="Generated\Serialization\ServiceSensitivityDescriptionConverter.cs" />
     <Compile Include="Generated\Serialization\ServiceStatusConverter.cs" />
     <Compile Include="Generated\Serialization\ServiceTypeDescriptionConverter.cs" />
     <Compile Include="Generated\Serialization\ServiceTypeExtensionDescriptionConverter.cs" />
